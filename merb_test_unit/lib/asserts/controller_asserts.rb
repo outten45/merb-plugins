@@ -14,11 +14,11 @@ module Merb::Test::Unit::ControllerAsserts
   end
   
   def assert_success(target)
-    assert (200..207).include?(target.respond_to?(:status) ? target.status : target), success_failure_message(target)
+    assert((200..207).include?(target.respond_to?(:status) ? target.status : target), success_failure_message(target))
   end
   
   def assert_missing(target)
-    assert (400..417).include?(target.respond_to?(:status) ? target.status : target), missing_failure_message(target)
+    assert((400..417).include?(target.respond_to?(:status) ? target.status : target), missing_failure_message(target))
   end
   
   private
